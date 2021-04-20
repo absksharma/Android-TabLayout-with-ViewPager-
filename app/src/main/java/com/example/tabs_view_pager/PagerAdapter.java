@@ -1,6 +1,5 @@
 package com.example.tabs_view_pager;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -9,9 +8,9 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     int no_of_tabs;
 
-    public PagerAdapter( FragmentManager fm, int no_of_tabs) {
+    public PagerAdapter(FragmentManager fm, int no_of_tabs) {
         super(fm);
-        this.no_of_tabs=no_of_tabs;
+        this.no_of_tabs = no_of_tabs;
     }
 
     @Override
@@ -19,17 +18,12 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
         Fragment fragment = null;
 
-        if(position==0)
-        {
+        if (position == 0) {
             fragment = new BlankFragment();
-        }
-        else if(position==1)
-        {
+        } else if (position == 1) {
             fragment = new BlankFragment2();
-        }
-        else if(position==2)
-        {
-            fragment= new BlankFragment3();
+        } else if (position == 2) {
+            fragment = new BlankFragment3();
         }
         return fragment;
     }

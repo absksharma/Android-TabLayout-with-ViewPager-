@@ -1,9 +1,9 @@
 package com.example.tabs_view_pager;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
-import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         pa = new PagerAdapter(getSupportFragmentManager(), tl.getTabCount());
 
         vp.setAdapter(pa);
+
         vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tl));
 
         tl.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
